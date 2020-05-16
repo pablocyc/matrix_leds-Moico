@@ -580,21 +580,22 @@ void showCharset(void)
   mx.update(MD_MAX72XX::ON);
 }
 
-void setup()
-{
+void setup() {
   mx.begin();
 
 #if  DEBUG
-  Serial.begin(57600);
+  Serial.begin(9600);
 #endif
-  PRINTS("\n[MD_MAX72XX Test & Demo]");
+  PRINTS("\n[Matriz de Leds - Moico]");
 //  scrollText("MD_MAX72xx Test  ");
 }
 
-void loop()
-{
-#if 1
+void loop() {
+#if 2
   scrollText("Graphics");
+  scrollText("   ");
+  scrollText("Graphics");
+  delay(1000);
   zeroPointSet();
   rows();
   columns();
@@ -606,12 +607,12 @@ void loop()
   spiral();
 #endif
 
-#if 1
-  scrollText("Control");
-  intensity();
-  scanLimit();
-  blinking();
-#endif
+// #if 1
+//   scrollText("Control");
+//   intensity();
+//   scanLimit();
+//   blinking();
+// #endif
 
 #if 1
   scrollText("Transform");
@@ -619,10 +620,10 @@ void loop()
   transformation2();
 #endif
 
-#if 1
-  scrollText("Charset");
-  wrapText();
-  showCharset();
-#endif
+// #if 1
+//   scrollText("Charset");
+//   wrapText();
+//   showCharset();
+// #endif
 }
 
